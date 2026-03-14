@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,7 +22,9 @@ class Bai17
             new Student{Id=3,Name="Chi",Score=9}
         };
 
-        var avg = students.Average(s => s.Score);
+        double avg = students.Average(s => s.Score);
+
+        Console.WriteLine("Diem TB: " + avg);
 
         Console.ReadKey();
     }
