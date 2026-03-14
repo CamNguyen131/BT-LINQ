@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,12 +17,14 @@ class Bai14
 
         List<Student> students = new List<Student>()
         {
-            new Student{Id=1,Name="An",Score=8},
-            new Student{Id=2,Name="Binh",Score=4},
+            new Student{Id=1,Name="An",Score=4},
+            new Student{Id=2,Name="Binh",Score=6},
             new Student{Id=3,Name="Chi",Score=9}
         };
 
-        var fail = students.Any(s => s.Score < 5);
+        bool fail = students.Any(s => s.Score < 5);
+
+        Console.WriteLine("Co SV rot: " + fail);
 
         Console.ReadKey();
     }
