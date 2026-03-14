@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,6 +24,11 @@ class Bai8
         };
 
         var result = students.Where(s => s.Score >= 8);
+
+        foreach(var s in result)
+        {
+            Console.WriteLine(s.Name + " - " + s.Score);
+        }
 
         Console.ReadKey();
     }
