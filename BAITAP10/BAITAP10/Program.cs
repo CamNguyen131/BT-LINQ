@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -19,11 +19,15 @@ class Bai10
         {
             new Student{Id=1,Name="An",Score=8},
             new Student{Id=2,Name="Binh",Score=6},
-            new Student{Id=3,Name="Chi",Score=9},
-            new Student{Id=4,Name="Dung",Score=7}
+            new Student{Id=3,Name="Chi",Score=9}
         };
 
         var sorted = students.OrderByDescending(s => s.Score);
+
+        foreach(var s in sorted)
+        {
+            Console.WriteLine(s.Name + " - " + s.Score);
+        }
 
         Console.ReadKey();
     }
