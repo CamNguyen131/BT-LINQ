@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -23,6 +23,16 @@ class Bai18
         };
 
         var group = students.GroupBy(s => s.Score >= 8 ? "Gioi" : "Khac");
+
+        foreach(var g in group)
+        {
+            Console.WriteLine(g.Key);
+
+            foreach(var s in g)
+            {
+                Console.WriteLine(s.Name);
+            }
+        }
 
         Console.ReadKey();
     }
