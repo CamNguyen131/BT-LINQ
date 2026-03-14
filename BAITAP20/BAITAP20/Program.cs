@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -26,6 +26,11 @@ class Bai20
         var top3 = students
                     .OrderByDescending(s => s.Score)
                     .Take(3);
+
+        foreach(var s in top3)
+        {
+            Console.WriteLine(s.Name + " - " + s.Score);
+        }
 
         Console.ReadKey();
     }
